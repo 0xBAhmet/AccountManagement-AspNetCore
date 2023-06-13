@@ -1,5 +1,5 @@
 # AccountManagement-AspNetCore
--<b>git clone https://github.com/your-username/FinalProject-Authentication.git <br></b>
+-<b>git clone https://github.com/0xBAhmet/AccountManagement-AspNetCore.git <br></b>
 -<b>update-database</b>
 # AccountController
 
