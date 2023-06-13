@@ -1,0 +1,96 @@
+﻿@model UpdateViewModel
+@{
+    ViewData["Title"] = "Update";
+}
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    .update-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        transition: border-color 0.3s;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
+    .text-danger {
+        color: #ff0000;
+    }
+
+    .btn-primary {
+        background-color: #4a90e2;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+        .btn-primary:hover {
+            background-color: #356dbf;
+        }
+
+    .footer {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+        text-align: center;
+        font-size: 12px;
+        color: #777777;
+    }
+</style>
+<div class="update-container">
+    <h1 class="display-4 border-bottom text-center pb-2">@ViewData["Title"]</h1>
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+        <div class="form-group">
+            <label asp-for="Currently_Password" class="form-label">Current Password</label>
+            <input asp-for="Currently_Password" class="form-control" placeholder="Current Password" type="password" />
+            <span asp-validation-for="Currently_Password" class="text-danger small"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="form-label">Password</label>
+            <input asp-for="Password" class="form-control" placeholder="Your Password" type="password" />
+            <span asp-validation-for="Password" class="text-danger small"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="RePassword" class="form-label">Confirm Password</label>
+            <input asp-for="RePassword" class="form-control" placeholder="Confirm Password" type="password" />
+            <span asp-validation-for="RePassword" class="text-danger small"></span>
+        </div>
+      
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Update</button>
+        </div>
+    </form>
+</div>
